@@ -25,7 +25,7 @@
       <div class="navbar">
         <nav>
             <ul class="sidebar-nav">
-              <li class="nav-item" style="float:left"><h3 style="text-align:center; color:white; margin:0px; padding: 9px 16px">
+              <li class="nav-item" style="float:left"><h3 class="custom-font2" style="text-align:center; color:white; margin:0px; padding: 9px 16px; letter-spacing: 2px">
                 jAIce: The Empathetic Robot
                 </h3></li>
               <li class="nav-item"><a href={{ url_for('home')}}>Home </a></li>
@@ -40,7 +40,7 @@
                 <div class="content-section-heading text-center">
                     <h1 class="mt-5 mb-0">About Us</h1>
                   <p>
-                    We are working at AI camp to make a cool natural language processing product. Blah blah blah blah.
+                    We are a group of awesome people at AI camp to make cool natural language processing products.
                   </p>
                     
                 </div>
@@ -53,33 +53,33 @@
                         <img src = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" width = "200" height = "200" class="circle">
                           <div class="h1t">Chandrark Muddana</div>
                           <div class="h2t">Project Manager</div>
-                          <p class="mb-0">An AI enthusiast who loves Natural Language Processing!</p>
+                          <p class="mb-0">A person who does whatever he wants.</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="just">
-                        <img src = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" width = "200" height = "200" class="circle">
+                        <img src = "{{ url_for('static', filename='img/chris.png') }}" width = "200" height = "200" class="circle">
                           <div class="h1t">Chris Sanrow</div>
                           <div class="h2t">Lead Back End Developer</div>
-                          <p class="mb-0">An AI enthusiast who loves Natural Language Processing!</p>
+                          <p class="mb-0">A fourth-year high school student who loves coding, playing classical guitar, and solving Rubik's Cubes.</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="just">
-                        <img src = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" width = "200" height = "200" class="circle">
+                        <img src =  "{{ url_for('static', filename='img/jace.jpg') }}" width = "200" height = "200" class="circle">
                           <div class="h1t">Jayce Chanas</div>
                           <div class="h2t">Lead Front End Developer</div>
-                          <p class="mb-0">An AI enthusiast who loves Natural Language Processing!</p>
+                          <p class="mb-0">The second Jayce, who is a senior at high school, is a coder in the LGBTQ+ community who likes video editing, gaming, and cooking.</p>
                         </div>
                     </div>
                 </div>
                 <div class="row gx-0">
                   <div class="col-lg-4">
                       <div class="just">
-                      <img src = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" width = "200" height = "200" class="circle">
+                    <img src =  "{{ url_for('static', filename='img/victoria.jpg') }}" width = "200" height = "200" class="circle">
                           <div class="h1t">Victoria You</div>
                           <div class="h2t">Front End Developer</div>
-                          <p class="mb-0">An AI enthusiast who loves Natural Language Processing!</p>
+                          <p class="mb-0">An almost nocturnal homosexual who loves playing Valorant, rice, and 3D printers.</p>
                       </div>
                   </div>
                     <div class="col-lg-4">
@@ -116,8 +116,8 @@
                     </li>
                     <li class="list-inline-item">
                         <a class="social-link rounded-circle text-white mr-3" href="https://github.com/minimaxir/aitextgen"><i class="icon-social-github"></i></a>
-                    </li> -->
-                </ul>
+                    </li>
+                </ul>-->
                 <p class="text-muted small mb-0">Copyright &copy; jAIce Synthetic Codes 2022 </p>
             </div>
         </footer>

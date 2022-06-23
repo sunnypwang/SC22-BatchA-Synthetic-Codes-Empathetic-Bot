@@ -25,10 +25,10 @@
        <div class="navbar">
         <nav>
             <ul class="sidebar-nav"> 
-              <li class="nav-item" style="float:left"><h3 style="text-align:center; color:white; margin:0px; padding: 9px 16px">
+              <li class="nav-item" style="float:left"><h3 class="custom-font2" style="text-align:center; color:white; margin:0px; padding: 9px 16px; letter-spacing:2px">
                 jAIce: The Empathetic Robot
                 </h3></li>
-              <li class="nav-item"><a href={{ url_for('home')}} style="color:#C2E5CF">Home </a></li>
+              <li class="nav-item" ><a href={{ url_for('home')}} style="color:#C2E5CF" "custom-font">Home </a></li>
               <li class="nav-item"><a href={{ url_for('team_members')}}>Our Team</a></li>
               <li class="nav-item"><a href="https://www.ai-camp.org">AI Camp</a></li>
               
@@ -41,12 +41,17 @@
         <div class="container header-container">
         <header class="masthead d-flex align-items-center">
             <div class="container px-4 px-lg-5 text-center">
-                <h1 class="mb-1 text-primary">jAIce</h1>
+                <h1 class="mb-1 text-primary custom-font">jAIce</h1>
                 <h3 class="mb-5 text-light"><em>the empathetic robot here to comfort you.</em></h3>
-            </div>
+          </div>
         </header>
+          <div class="reveal2">
+            
+          <div class = "picture">
+                  <img src = "{{ url_for('static', filename='img/arrow.png') }}" width = "200" height = "200">
+          </div> 
         </div>
-
+        </div>
       </div>
       
       
@@ -89,7 +94,7 @@ For further expansion, we may aim to provide practical advice, expand into a cha
             <div class="purpose">
               <h3 class = "under"> Description </h3>
               <p class="purpose-text">
-                jAIce uses a the GPT2 model developed by OpenAI. The dataset to train it was the EmpatheticDialogues dataset outlined in this <a class="url-link" href="https://arxiv.org/pdf/1811.00207.pdf"> paper.</a> We cleaned the dataset by removing all questions and removing unnecessary data and quotations. We used Python and aitextgen to help train the model.  
+                jAIce uses a GPT-2 model developed by OpenAI. The dataset used for training is the Empathetic Dialogues dataset outlined in this <a class="url-link" href="https://arxiv.org/pdf/1811.00207.pdf"> paper</a>. We cleaned the dataset by removing all questions and removing unnecessary data and quotations. We used Python and aitextgen to help train the model.  
               </p>
               <p class="purpose-text">
                There are two parameters you can adjust. Higher temperature causes the model to come up with more specific response, while top_p controls how much the model is confident in its response (higher number is a higher percent of confidence).
@@ -124,7 +129,8 @@ For further expansion, we may aim to provide practical advice, expand into a cha
                               <textarea class="form-control-lg" rows="4" cols="50" placeholder="Write your prompt here..." required="" id="text_gen_input" name="prompt">{{ prompt }}</textarea>
                               </div>
                               <div class="form-group">
-                                <button type="submit" class="btn btn-light" id="text_gen_button">Submit</button>
+                                <button type="submit" class="btn btn-light" id="text_gen_button">Submit
+                                  </button>
                               </div>
                               <div class="hidden lds-ring" id="loading"><div></div><div></div><div></div><div></div></div>
                               <script>
@@ -153,7 +159,7 @@ For further expansion, we may aim to provide practical advice, expand into a cha
                             <div class="col-lg-4">
                               <div class="slider">
                                 <input type="range" min="0" max="100" value="{{ temperature }}" class="slider" id="tempSlider" name="temperature" step="5">
-                                <label class="lead mb-5 text-light-2" title="Higher temperature causes the model to come up with more specific response">Temperature : </label>
+                                <label class="lead mb-5 text-light-2 qtip" data-tip="A higher temperature causes the model to come up with more specific response at the cost of accuracy.">Temperature : </label>
                                 <label id="tempDisplay">
                                   <script>
                                     var tempSlider = document.getElementById("tempSlider");
@@ -167,7 +173,7 @@ For further expansion, we may aim to provide practical advice, expand into a cha
                                 <br>
 
                                   <input type="range" min="0" max="100" value="{{ top_p }}" class="slider" id="top_pSlider" name="top_p" step="5">
-                                <label class="lead mb-5 text-light-2">Top p : </label>
+                                <label class="lead mb-5 text-light-2 qtip" data-tip="A higher number is a higher percent of confidence of the model.">Top p : </label>
                                 <label id="top_pDisplay">
                                   <script>
                                     var top_pSlider = document.getElementById("top_pSlider");
