@@ -10972,17 +10972,22 @@ font-size: 5.5rem;
 }
 .arrow {
   position: absolute;
+  transform: scale(0.3);
   width: $base * 3.5;
   height: $base * 0.8;
-  animation: move-arrow 3s ease-in-out infinite;
+  animation: move-arrow 3s ease infinite;
   margin-top: -20%
 }
 
-.arrow:first-child {
-  animation: move-arrow 3s ease-in-out 1s infinite;
+.arrow1 {
+  position: absolute;
+  width: $base * 3.5;
+  height: $base * 0.8;
+  animation: move-arrow 3s ease infinite;
+  margin-top: -15%
 }
 
-/*rrow:nth-child(2) {
+/*arrow:nth-child(2) {
   animation: move-arrow 3s ease-in-out 2.4s infinite;
 }*/
 
@@ -10990,20 +10995,23 @@ font-size: 5.5rem;
 
 @keyframes move-arrow{
     0%{ 
-        opacity:0;
-        transform: translateY(-60px);
+        transform: scale(30%);
+        transform: translateY(-100px);
     }
     35%{
         opacity:1;
         transform: translateY(0px);
+        transform: scale(100%);
     }
-    65%{
+    40%{
         opacity:1;
-        transform: translateY(10px);
+        transform: translateY(25px);
+        transform: scale(1);
     }
     100%{
         opacity:0;
-        transform: translateY(80px);
+        transform: translateY(150px);
+        transform: scale(0.3);
     }
 }
 
