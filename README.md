@@ -1,8 +1,11 @@
-# jAIce : The Empathetic Robot
+<h1 align="center" style="font-weight: bold; color: #dda4a3;">jAIce : The Empathetic Robot</h1><h2 align="center">AI Empathetic Response Generator</h2>
 
-## Empathetic Dialogue Generator 
+<h5 align="center" style="font-style: italic;">A project by Synthetic Codes</h5>
 
-###### _A project by Synthetic Codes_
+
+![](assets/jaice.png)
+
+---
 
 ### How to Use
 
@@ -57,19 +60,14 @@ Team Members:
 
 - **Chandrark Muddana**  
   Product Manager  
-
 - **Chris Sanrow**  
   Lead Back End Developer  
-
 - **Jayce Chanas**  
   Lead Front End Developer  
-
 - **Victoria You**  
   Front End Developer  
-
 - **Riya Kumar**  
   Back End Developer  
-
 - **Phakawat Wangkriangkri**  
   Mentor  
 
