@@ -28,9 +28,9 @@
               <li class="nav-item" style="float:left"><h3 class="custom-font2" style="text-align:center; color:white; margin:0px; padding: 9px 16px; letter-spacing: 2px">
                 jAIce: The Empathetic Robot
                 </h3></li>
-              <li class="nav-item"><a href={{ url_for('home')}}>Home </a></li>
-              <li class="nav-item"><a href={{ url_for('team_members')}} style="color:#C2E5CF">Our Team</a></li>
-              <li class="nav-item"><a href="https://www.ai-camp.org">AI Camp</a></li>
+              <li class="nav-item custom-font2"><a href={{ url_for('home')}}>Home </a></li>
+              <li class="nav-item custom-font2"><a href={{ url_for('team_members')}} style="color:#C2E5CF">Our Team</a></li>
+              <li class="nav-item custom-font2"><a href="https://www.ai-camp.org">AI Camp</a></li>
             </ul>
         </nav>
       </div>
@@ -38,7 +38,7 @@
         <section class="content-section" id="aboutus">
             <div class="container px-4 px-lg-5">
                 <div class="content-section-heading text-center">
-                    <h1 class="mt-5 mb-0">About Us</h1>
+                    <h1 class="mt-5 mb-0 custom-font">About Us</h1>
                   <p>
                     We are a group of awesome people at AI camp to make cool natural language processing products.
                   </p>
@@ -46,13 +46,13 @@
                 </div>
               
                 <div class="team">
-                  <h2 class="mb-3 text-center">The Team</h2>
+                  <h2 class="mb-3 text-center custom-font">The Team</h2>
                 <div class="row gx-0">
                     <div class="col-lg-4">
                         <div class="just">
-                        <img src = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" width = "200" height = "200" class="circle">
+                        <img src = "{{ url_for('static', filename='img/landscape.jpg') }}" width = "200" height = "200" class="circle">
                           <div class="h1t">Chandrark Muddana</div>
-                          <div class="h2t">Project Manager</div>
+                          <div class="h2t">Product Manager</div>
                           <p class="mb-0">A person who does whatever he wants.</p>
                         </div>
                     </div>

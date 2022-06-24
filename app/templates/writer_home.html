@@ -28,9 +28,9 @@
               <li class="nav-item" style="float:left"><h3 class="custom-font2" style="text-align:center; color:white; margin:0px; padding: 9px 16px; letter-spacing:2px">
                 jAIce: The Empathetic Robot
                 </h3></li>
-              <li class="nav-item" ><a href={{ url_for('home')}} style="color:#C2E5CF" "custom-font">Home </a></li>
-              <li class="nav-item"><a href={{ url_for('team_members')}}>Our Team</a></li>
-              <li class="nav-item"><a href="https://www.ai-camp.org">AI Camp</a></li>
+              <li class="nav-item custom-font2" ><a href={{ url_for('home')}} style="color:#C2E5CF" "custom-font">Home </a></li>
+              <li class="nav-item custom-font2"><a href={{ url_for('team_members')}}>Our Team</a></li>
+              <li class="nav-item custom-font2"><a href="https://www.ai-camp.org">AI Camp</a></li>
               
             </ul>
         </nav>
@@ -45,12 +45,18 @@
                 <h3 class="mb-5 text-light"><em>the empathetic robot here to comfort you.</em></h3>
           </div>
         </header>
-          <div class="reveal2">
             
           <div class = "picture">
-                  <img src = "{{ url_for('static', filename='img/arrow.png') }}" width = "200" height = "200">
+            <div class = "arrow">
+              <img src = "{{ url_for('static', filename='img/arrow.png') }}" width = "200" height = "200">
+            </div>
+            <div class = "arrow">
+              <img src = "{{ url_for('static', filename='img/arrow.png') }}" width = "200" height = "200">
+            </div>
+            <div class = "arrow">
+              <img src = "{{ url_for('static', filename='img/arrow.png') }}" width = "200" height = "200">
+            </div>
           </div> 
-        </div>
         </div>
       </div>
       
@@ -63,7 +69,7 @@
       <div class="mainbody">
           <div class="main reveal">
             <div class="purpose">
-              <h3 class = "under"> Purpose </h3>
+              <h3 class = "under custom-font"> Purpose </h3>
               <p class="purpose-text">
                 The purpose of jAIce is to make sure you have someone to go to for some comforting responses. This is a safe coping mechanism for the user since this allows positive venting to be taken place which can be a helpful method for people to process their emotions and reduce their stress; It can be used as a tool to aid with one’s mental well-being.
               </p>
@@ -76,7 +82,7 @@
           
            <div class="Main-Overview reveal">
             <div class="purpose">
-              <h3 class = "under"> Application </h3>
+              <h3 class = "under custom-font"> Application </h3>
               <p class="purpose-text">
                 While the software may not be applicable to professional therapeutic processes at this stage, it can be used as a tool to aid with one’s mental wellbeing. A large component of this coping method is that the receiver of such venting listens carefully and provides positive affirmation and/or comfort, which the software aims to do. 
               </p>
@@ -92,7 +98,7 @@ For further expansion, we may aim to provide practical advice, expand into a cha
           
           <div class="Description-Overview reveal">
             <div class="purpose">
-              <h3 class = "under"> Description </h3>
+              <h3 class = "under custom-font"> Description </h3>
               <p class="purpose-text">
                 jAIce uses a GPT-2 model developed by OpenAI. The dataset used for training is the Empathetic Dialogues dataset outlined in this <a class="url-link" href="https://arxiv.org/pdf/1811.00207.pdf"> paper</a>. We cleaned the dataset by removing all questions and removing unnecessary data and quotations. We used Python and aitextgen to help train the model.  
               </p>
@@ -117,7 +123,7 @@ For further expansion, we may aim to provide practical advice, expand into a cha
             <div class="container px-4 px-lg-5 text-center">
 <!--                 <div class="row gx-4 gx-lg-5 justify-content-center"> -->
 <!--                     <div class="col-lg-5"> -->
-                        <h1 class="text-light-2">Test out our model here!</h1>
+                        <h1 class="text-light-2 custom-font2">Test out our model here!</h1>
                         <p class="lead mb-5"><strong>Submit whatever you would like to get off your chest, and jAIce will respond below!</strong></p>
                         <div class="container px-4">
                           
@@ -158,7 +164,7 @@ For further expansion, we may aim to provide practical advice, expand into a cha
                             <!-- Slider-->
                             <div class="col-lg-4">
                               <div class="slider">
-                                <input type="range" min="0" max="100" value="{{ temperature }}" class="slider" id="tempSlider" name="temperature" step="5">
+                                <input type="range" min="5" max="100" value="{{ temperature }}" class="slider" id="tempSlider" name="temperature" step="5">
                                 <label class="lead mb-5 text-light-2 qtip" data-tip="A higher temperature causes the model to come up with more specific response at the cost of accuracy.">Temperature : </label>
                                 <label id="tempDisplay">
                                   <script>
